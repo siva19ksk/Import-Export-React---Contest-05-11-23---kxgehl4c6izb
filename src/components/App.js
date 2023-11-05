@@ -1,19 +1,61 @@
+import export react:
+App.js:
 import React, { Component, useState } from "react";
 import '../styles/App.css';
-import Header from "./components/Header.js";
-import Input from "./components/InputQuery.js";
-import SubHead from "./components/SubHeading.js";
-import SubmitBtn from "./components/SubmitButton.js";
+import Heading from './Heading.js';
+import SubHeading from './SubHeading.js';
+import InputQuery from './InputQuery.js';
+import SubmitButton from './SubmitButton.js';
 
-export default const App = () => {
+const App = () => {
   return (
     <div id="main">
-      <Header/>
-      <Input/>
-      <SubHead/>
-      <SubmitBtn/>
+      <Heading />
+      <SubHeading />
+      <InputQuery />
+      <SubmitButton />
     </div>
   )
 }
 
+export default App;
 
+Heading.js:
+import React from 'react'
+
+function Heading() {
+    return (
+        <h1>Welcome to our Site.</h1>
+    )
+}
+export default Heading;
+
+InputQuery.js:
+import React from 'react'
+
+function InputQuery() {
+    return (
+        <input placeHolder={'Enter your query here..'} />
+    )
+}
+export default InputQuery;
+
+SubHeading.js:
+import React from 'react'
+
+function SubHeading() {
+    return (
+        <h5>Happy to solve you doubts.</h5>
+    )
+}
+export default SubHeading;
+
+SubmitButton.js:
+import React from 'react'
+
+function SubmitButton() {
+    return (
+        <button>Ask</button>     
+    )
+}
+export default SubmitButton;
